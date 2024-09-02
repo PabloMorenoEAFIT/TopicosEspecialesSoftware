@@ -37,3 +37,7 @@ Route::get('/products/{id}', 'App\Http\Controllers\ProductController@show')->nam
 Route::get('/cart', 'App\Http\Controllers\CartController@index')->name("cart.index");
 Route::get('/cart/add/{id}', 'App\Http\Controllers\CartController@add')->name("cart.add");
 Route::get('/cart/removeAll/', 'App\Http\Controllers\CartController@removeAll')->name("cart.removeAll");
+
+// relacionado a la imagenes
+Route::get('/image', 'App\Http\Controllers\ImageController@index')->name("image.index");
+Route::post('/image/save', 'App\Http\Controllers\ImageController@save')->name("image.save");
